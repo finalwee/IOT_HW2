@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+    - name: Update repositories cache and install "foo" package
+      apt:
+        name: foo
+        update_cache: yes
+
+    - name: Remove "foo" package
+      apt:
+        name: foo
+        state: absent
+
+    - name: Install the package "foo"
+      apt:
+        name: foo
