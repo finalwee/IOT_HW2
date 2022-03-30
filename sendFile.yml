@@ -1,6 +1,9 @@
 ---
 - hosts: all
   tasks:
+    - debug:
+      msg: "{{ lookup('env', 'PWD') }}"
+
     - name: Send file to all host
       copy:
         src: ~/file/foo.txt
