@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Send file to all host
+      copy:
+        src: ~/file/foo.txt
+        dest: ~/Documents
+        owner: pi
+        group: pi        
+        mode: 0644
