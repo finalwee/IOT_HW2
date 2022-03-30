@@ -1,16 +1,11 @@
 ---
 - hosts: all
   tasks:
-    - name: Update repositories cache and install "cmatrix" package
-      apt:
-        name: cmatrix
-        update_cache: yes
-
-    - name: Remove "cmatrix" package
-      apt:
-        name: cmatrix
-        state: absent
-
     - name: Install the package "cmatrix"
       apt:
         name: cmatrix
+    
+    - name: Remove the package "cmatrix"
+      apt:
+        name: cmatrix
+        state: absent
