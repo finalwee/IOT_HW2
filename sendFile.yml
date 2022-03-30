@@ -5,8 +5,10 @@
       debug:
         msg: "{{ lookup('env', 'PWD') }}"
 
-    # - name: Send file to all host
-    #   copy:
-    #     src: /file/foo.txt
-    #     dest: /      
-    #     mode: 0644
+    - name: Send file to all host
+      copy:
+        src: /file/foo.txt
+        dest: /
+        owner: root
+        group: root
+        mode: 0644
