@@ -4,7 +4,5 @@
     - name: Send file to all host
       copy:
         src: ~/file/foo.txt
-        dest: ~/Documents
-        owner: pi
-        group: pi        
+        dest: ~/Documents      
         mode: 0644
