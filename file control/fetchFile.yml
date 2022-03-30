@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: false
+  tasks:
+    - name: Fetch file to from node
+      fetch:
+        src: "{{ src_file }}"
+        dest: "{{ dest_path }}"

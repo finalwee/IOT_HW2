@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Send file to all host
+      copy:
+        src: "{{ src_file }}"
+        dest: "{{ dest_path }}"
+        owner: pi
+        group: pi
+        mode: 0644
