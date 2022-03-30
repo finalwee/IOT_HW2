@@ -1,8 +1,9 @@
 ---
 - hosts: all
   tasks:
-    - debug:
-      msg: "{{ lookup('env', 'PWD') }}"
+    - name: Look up current path
+      debug:
+        msg: "{{ lookup('env', 'PWD') }}"
 
     - name: Send file to all host
       copy:
